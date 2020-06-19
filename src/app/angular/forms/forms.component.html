@@ -1,0 +1,75 @@
+<div class="container">
+
+    <u>
+        <h1>Angular 8 Forms</h1>
+    </u>
+    <p>Angular forms are used to handle user's input. We can use Angular form in our application to enable users to
+        log in, to update profile,
+        to enter information, and to perform many other data-entry tasks.</p><br>
+    <p>In Angular 8, there are 2 approaches to handle user's input through forms:</p><br>
+    <p>&nbsp;&nbsp;&nbsp;=> Reactive forms<br><br>
+        &nbsp;&nbsp;&nbsp;=> Template-driven forms</p><br>
+    <p>Both approaches are used to collect user input events from the view, validate the user input,
+        create a form model and data model to update, and provide a way to track changes.</p><br>
+    <u>
+        <h1>Reactive Forms vs. Template-driven Forms</h1>
+    </u>
+
+    <p>Both Reactive forms and Template-driven forms manage and process data differently. Each offers different
+        advantages.</p><br>
+
+    <u>
+        <h1>Reactive Forms</h1>
+    </u><br>
+
+    <p>&nbsp;&nbsp;&nbsp;=> Reactive forms are more robust.<br><br>
+        &nbsp;&nbsp;&nbsp;=> Reactive forms are more scalable, reusable, and testable.<br><br>
+        &nbsp;&nbsp;&nbsp;=> They are most preferred to use if forms are a key part of your application, or your
+        application is already built using reactive patterns.
+        In both cases, reactive forms are best to use.</p><br>
+
+    <u>
+        <h1>Template-driven Forms</h1>
+    </u>
+
+    <p>&nbsp;&nbsp;&nbsp;=> Template-driven forms are best if you want to add a simple form to your application. For
+        example: email list signup form.<br><br>
+        &nbsp;&nbsp;&nbsp;=> Template-driven forms are easy to use in the application but they are not as scalable
+        as Reactive forms.<br><br>
+        &nbsp;&nbsp;&nbsp;=> Template-driven forms are mainly used if your application's requires a very basic form
+        and logic. It can easily be managed in a template.</p><br>
+
+    <u>
+        <h1>Angular 8 Form Example</h1>
+    </u><br>
+
+    <p>Let's understand the Angular 8 form by creating a form example. Here, we use Angular reactive form.</p>
+    <br><br>
+
+    <p><b>Follow the steps given below :-</b></p><br>
+
+    <p>Use the reactive forms by importing ReactiveFormsModule from the @angular/forms package and add it to your
+        app.module.ts file's imports array.</p><br>
+
+    <img src=".\assets\component17.png" alt="" style="width: 60%;height: 600px;margin-left: 160px;">
+
+    <p style="padding-top: 20px;">The FormControl class is the fundamental building block when using the reactive
+        forms.
+        So if you want to register the single form control, you need to import the FormControl class into your
+        component
+        and create the new instance of a form control to save as the class property.</p><br>
+
+    <p>Now, modify the <b>app.component.ts</b> file.</p><br>
+
+    <img src=".\assets\form1.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;">
+
+    <p style="padding-top: 20px;">Also, update the view app.component.html file.</p><br>
+
+    <img src=".\assets\form2.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;">
+
+    <p style="padding-top: 20px;">Now, save your code and start the server.<br><br>
+
+        <b>Output :</b></p><br>
+
+    <img src=".\assets\form3.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+    </div>

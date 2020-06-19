@@ -1,0 +1,125 @@
+<div class="container">
+       
+
+    <p>
+        We might come across a situation where we need some code to be used everywhere on the page. For example, 
+        it can be for data connection that needs to be shared across components. This is achieved with the help of Services. 
+        With services, we can access methods and properties across other components in the entire project.
+    </p><br>
+
+    <p>To create a service, we need to make use of the command line as given below :−</p><br>
+
+    <div
+        style="width: 100%;height: 80px;background-color: rgba(241, 234, 234, 0.973);border-radius: 5px;padding-top: 20px;padding-left: 10px;">
+        <p>ng g service myservice</p>
+    </div><br>
+
+    <div
+        style="width: 100%;height: 120px;background-color: rgba(241, 234, 234, 0.973);border-radius: 5px;padding-top: 20px;padding-left: 10px;">
+        <p>
+            C:\projectA7\angular7-app>ng g service myservice <br>
+            CREATE src/app/myservice.service.spec.ts (348 bytes) <br>
+            CREATE src/app/myservice.service.ts (138 bytes)<br>
+        </p>
+    </div><br>
+
+    <p>The files created in app folder are as follows :−</p><br>
+
+    <img src=".\assets\service1.png" alt="" style="width: 40%;height: 700px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">Following are the files created which are shown at the bottom ― myservice.service.specs.ts and myservice.service.ts.</p><br>
+
+    <p><b>myservice.service.ts</b></p><br>
+
+    <img src=".\assets\service2.png" alt="" style="width: 60%;height: 300px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">Here, the injectable module is imported from the @angular/core. It contains 
+        the @Injectable method and a class called MyserviceService.
+         We will create our service function in this class.</p><br>
+
+    <p>Before creating a new service, we need to include the service created in the main parent <b>app.module.ts</b>.</p><br>
+
+    <img src=".\assets\service3.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">We have imported the Service with the class name, and the same class is used in the providers. 
+        Let us now switch back to the service class and create a service function.</p><br>
+
+    <p>In the service class, we will create a function which will display today’s date. We can use the same function in the main parent component <b>app.component.ts</b> 
+        and also in the new component new-cmp.component.ts that we created in the previous chapter.</p><br>
+
+    <p>Let us now see how the function looks in the service and how to use it in components.</p><br>
+
+    <img src=".\assets\service4.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">In the above service file, we have created a function <b>showTodayDate</b> . Now we will return the new Date () created. Let us see how we can access this function in the component class.</p><br>
+
+    <p><b>app.component.ts</b></p><br>
+
+    <img src=".\assets\service5.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">The ngOnInit function gets called by default in any component created. The date is fetched from the service as shown above. 
+        To fetch more details of the service, we need to first include the service in the component ts file.</p><br>
+
+    <p>We will display the date in the .html file as shown below :−</p><br>
+
+    <p><b>app.component.html</b></p><br>
+    
+    <img src=".\assets\service7.png" alt="" style="width: 60%;height: 80px;margin-left: 160px;"><br>
+        
+    <p style="padding-top: 20px;">Let us now see how to use the service in the new component created.</p><br>
+
+    <p><b>new-cmp.component.ts</b></p><br>
+
+    <img src=".\assets\service8.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">In the new component that we have created, we need to first import the service that we want and access the methods and properties of the same. Check the code highlighted. 
+        todaydate is displayed in the component html as follows :−</p>
+
+    <p><b>new-cmp.component.html</b></p><br>
+
+    <img src=".\assets\service9.png" alt="" style="width: 60%;height: 120px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">The selector of the new component is used in the app.component.html file. The contents from the above html file will be 
+        displayed in the browser as shown below :−</p><br>
+
+    <img src=".\assets\service10.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">If you change the property of the service in any component, the same is changed in other components too. Let us now see how this works.</p><br>
+
+    <p>We will define one variable in the service and use it in the parent and the new component. 
+        We will again change the property in the parentcomponent and will see if the same is changed in the new component or not.</p><br>
+
+    <p>In <b>myservice.service.ts</b>, we have created a property and used the same in other parent and new component.</p>
+
+    <img src=".\assets\service11.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">Let us now use the serviceproperty variable in other components. In app.component.ts, we are accessing the variable as follows :−</p><br>
+
+    <img src=".\assets\service12.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">We will now fetch the variable and work on the console.log. In the next line, we will change the value of the variable to “component created”. We will do the same in new-cmp.component.ts.</p><br>
+
+    <img src=".\assets\service13.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">In the above component, we are not changing anything but directly assigning the property to the component property.</p><br>
+
+    <p>Now when you execute it in the browser, the service property will be changed since the value of it is changed in app.component.ts and 
+        the same will be displayed for the new-cmp.component.ts.</p><br>
+
+    <p>Also check the value in the console before it is changed.</p><br>
+
+    <img src=".\assets\service14.png" alt="" style="width: 60%;height: 400px;margin-left: 160px;"><br>
+
+    <p style="padding-top: 20px;">Here is the app.component.html and new-cmp.component.html files :−</p><br>
+
+    <p><b>app.component.html</b></p><br>
+
+    <img src=".\assets\service15.png" alt="" style="width: 60%;height: 80px;margin-left: 160px;"><br>
+
+    <p><b>new-cmp.component.html</b></p><br>
+
+    <img src=".\assets\service16.png" alt="" style="width: 60%;height: 80px;margin-left: 160px;"><br>
+
+   
+
+</div>

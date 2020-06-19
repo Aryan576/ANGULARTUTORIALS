@@ -1,0 +1,40 @@
+<div style="display: flex;">
+<div class="sidebar" >  
+    <label class="l1"><span>Getting Started</span></label>
+    <a [routerLink]="['./introduction']"><span>Introduction</span></a>
+
+   
+
+    <label class="l1"><span>Angular</span></label>
+    <a [routerLink]="['./components']"><span>Components</span></a>
+    <a [routerLink]="['./modules']"><span>Modules</span></a>
+    <a [routerLink]="['./databinding']"><span>Data Binding</span></a>
+    <a [routerLink]="['./eventbinding']"><span> Event Binding</span></a>
+    <a [routerLink]="['./property']"><span> Property Binding</span></a>
+    <a [routerLink]="['./ngfor']"><span> NgFor</span></a>
+    <a [routerLink]="['./ngif']"><span> Ngif</span></a>
+    <a [routerLink]="['./ngswitch']"><span> Ngswitch</span></a>
+    
+    
+    <a [routerLink]="['./routing']"><span>Routing</span></a>
+    <a [routerLink]="['./service']"><span>Services</span></a>
+    <a [routerLink]="['./httpclient']"><span>Http Client</span></a>
+     <a [routerLink]="['./forms']"><span>Forms</span></a>
+     
+     <label class="l1"><span>Example </span></label>
+     <a [routerLink]="['./installation']"><span>Install</span></a>
+     <a [routerLink]="['./firstapp']"><span>First</span></a>
+     <a [routerLink]="['./mongo']"><span>mongo</span></a>
+     <a [routerLink]="['./mongoinstall']"><span>mongoInstall </span></a>
+     <a [routerLink]="['./Postgresql']"><span>Postgresql </span></a>
+     <a [routerLink]="['./nodejs']"><span>Nodejs </span></a>
+     <a [routerLink]="['./Authguard']"><span>Authguard </span></a>
+     
+ </div>
+
+  <div>
+      
+    <router-outlet></router-outlet>
+  </div>
+</div> 
+   

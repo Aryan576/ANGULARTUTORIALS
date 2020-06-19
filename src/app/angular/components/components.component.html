@@ -1,0 +1,174 @@
+<div style="height: 700px; overflow-y: scroll;" >
+    <div class="container">
+    <div style="padding:1em;line-height:1.5">
+   
+        <p style="padding-top: 20px;">Major part of the development with Angular 8 is done in the components. Components
+            are basically classes
+            that interact with the .html file of the component, which gets displayed on the browser. We have seen
+            the file structure in one of our previous chapters.</p><br>
+
+        <p style="font-weight: 400;">The file structure has the app component and it consists of the following files :−
+        </p><br>
+
+        <p>&nbsp;&nbsp;&nbsp; => app.component.css<br><br>
+            &nbsp;&nbsp;&nbsp; => app.component.html<br><br>
+            &nbsp;&nbsp;&nbsp; => app.component.spec.ts<br><br>
+            &nbsp;&nbsp;&nbsp; => app.component.ts<br><br>
+            &nbsp;&nbsp;&nbsp; => app.module.ts</p><br>
+
+        <p>And if you have selected angular routing during your project setup,
+            files related to routing will also get added and the files are as follows :−</p><br>
+
+        <p>&nbsp;&nbsp;&nbsp; => app-routing.module.ts</p><br>
+
+        <p>The above files are created by default when we created new project using the angular-cli command.</p><br>
+
+        <p>If you open up the <b>app.module.ts</b> file, it has some libraries which are imported and also a
+            declarative which is assigned the appcomponent as follows :−</p>
+            <div class="responsive">
+        <img src=".\assets\component1.png" alt=""
+            style="width: 60%;height: 400px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">The declarations include the AppComponent variable, which we have already
+            imported. This becomes the parent component.</p><br>
+
+        <p>Now, angular-cli has a command to create your own component. However, the app component which is created by
+            default will
+            always remain the parent and the next components created will form the child components.</p><br>
+
+        <p>Let us now run the command to create the component with the below line of code :−</p><br>
+
+        <div
+            style="width: 100%;height: 80px;background-color: rgba(241, 234, 234, 0.973);border-radius: 5px;padding-top: 20px;padding-left: 10px;">
+            <p>ng g component new-cmp </p>
+        </div><br>
+
+        <p>When you run the above command in the command line, you will receive the following output :−</p><br>
+
+        <div class="responsive">
+        <img src=".\assets\component2.png" alt=""
+            style="width: 60%;height: 200px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">Now, if we go and check the file structure, we will get the new-cmp new folder
+            created under the src/app folder.</p><br>
+
+        <p>The following files are created in the new-cmp folder :−</p><br><br>
+        <p>&nbsp;&nbsp;&nbsp; => new-cmp.component.css − css file for the new component is created.<br><br>
+            &nbsp;&nbsp;&nbsp; => new-cmp.component.html − html file is created.<br><br>
+            &nbsp;&nbsp;&nbsp; => new-cmp.component.spec.ts − this can be used for unit testing.<br><br>
+            &nbsp;&nbsp;&nbsp; => new-cmp.component.ts − here, we can define the module, properties, etc.</p><br>
+
+        <p>Changes are added to the <b>app.module.ts</b> file as follows :−</p><br>
+
+        <div class="responsive">
+        <img src=".\assets\component3.png" alt=""
+            style="width: 60%;height: 500px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">The <b>new-cmp.component.ts</b> file is generated as follows :−</p>
+        <div class="responsive">
+        <img src=".\assets\component4.png" alt=""
+            style="width: 60%;height: 500px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">If you see the above <b>new-cmp.component.ts</b> file,
+            it creates a new class called NewCmpComponent, which implements OnInit
+            in which there is a constructor and a method called <b>ngOnInit().</b>
+            ngOnInit is called by default when the class is executed.</p><br>
+
+        <p>Let us check how the flow works. Now, the app component, which is
+            created by default becomes the parent component. Any component added
+            later becomes the child component.</p><br>
+
+        <p>When we hit the url in the <b>"http://localhost:4200/"</b> browser, it first executes the index.html file
+            which is shown below :−</p><br>
+            <div class="responsive">
+        <img src=".\assets\component5.png" alt=""
+            style="width: 60%;height: 500px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p>The above is the normal html file and we do not see anything that is printed in the browser. We shall take a
+            look at the tag in the body section.</p><br>
+
+        <div
+            style="width: 100%;height: 80px;background-color: rgba(241, 234, 234, 0.973);border-radius: 5px;padding-top: 20px;padding-left: 10px;">
+            <p>
+                < app-root>
+                    < /app-root>
+            </p>
+        </div><br>
+
+
+        <p style="padding-top: 20px;">This is the root tag created by the Angular by default. This tag has the reference
+            in the main.ts file.</p><br>
+            <div class="responsive">
+        <img src=".\assets\component6.png" class="img-fluid"
+            style="width: 60%;height: 400px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">AppModule is imported from the app of the main parent module, and the same is
+            given to the bootstrap Module, which makes the appmodule load.</p><br>
+
+        <p>Let us now see the <b>app.module.ts</b> file :−</p><br>
+        <div class="responsive">
+        <img src=".\assets\component7.png" class="img-fluid"
+            style="width: 60%;height: 400px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">Here, the <b>AppComponent</b> is the name given, i.e., the variable to store the
+            reference of the <b>app.component.ts</b>
+            and the same is given to the bootstrap. Let us now see the <b>app.component.ts</b> file.</p><br>
+            <div class="responsive">
+        <img src=".\assets\component8.png" class="img-fluid"
+            style="width: 60%;height: 300px;margin-left: 200px;border-radius: 6px;"><br>
+                </div>
+        <p style="padding-top: 20px;">Angular core is imported and referred as the Component and the same is used in the
+            Declarator as :−</p><br>
+            <div class="responsive">
+        <img src=".\assets\component9.png" class="img-fluid"
+            style="width: 60%;height: 200px;margin-left: 200px;border-radius: 6px;"><br>
+                </div>
+        <p style="padding-top: 20px;">The style file is empty as we do not need any styling at present. But when we run
+            the project,
+            we do not see anything related to the new component getting displayed in the browser.</p><br>
+        <p>The browser displays the following screen :−</p><br>
+        <div class="responsive">
+        <img src=".\assets\component12.png" class="img-fluid"
+            style="width: 60%;height: 500px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">Let us add some more details to the new component created and see the display in
+            the browser.</p><br>
+
+        <p><b>new-cmp.component.ts</b></p><br>
+        <div class="responsive">
+        <img src=".\assets\component13.png" class="img-fluid"
+            style="width: 60%;height: 400px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">In the class, we have added one variable called newcomponent and the value is
+            “Entered in new component created”.</p>
+
+        <p>The above variable is added in the <b>new-cmp.component.html</b> file as follows :−</p>
+
+        <div class="responsive">
+        <img src="./sassets/component14.png" class="img-fluid"
+            style="width: 50%;height: 150px;margin-left: 200px;border-radius: 6px;"><br>
+            </div>
+
+        <p style="padding-top: 20px;">Now since we have included the <b>
+                < app-new-cmp>
+                    < /app-new-cmp>
+            </b> selector in the <b>app.component.html</b> which is the .html of the parent component, the content
+            present in the <b>new-cmp.component.html</b> file gets displayed on the browser.</p><br>
+
+        <p>Following screen will be displayed in the browser :−</p><br>
+        <div class="responsive">
+        <img src="./assets/component15.png" class="img-fluid"
+            style="width: 60%;height: 500px;margin-left: 200px;border-radius: 6px;"><br>
+       </div>
+    </div>
+</div>
+</div>

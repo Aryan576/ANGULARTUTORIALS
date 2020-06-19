@@ -1,0 +1,82 @@
+<div class="main">
+    <div class="container">
+        <p class="h1" style="font-family: Georgia, 'Times New Roman', Times, serif;">Introduction</p>
+        <hr>
+        <p class="text">
+            MongoDB is a document-oriented NoSQL database used for high volume data storage. 
+            Instead of using tables and rows as in the traditional relational databases, 
+            MongoDB makes use of collections and documents. 
+            Documents consist of key-value pairs which are the basic unit of data in MongoDB. 
+            Collections contain sets of documents and function which is the equivalent of relational database tables. 
+            MongoDB is a database which came into light around the mid-2000s.
+        </p>
+        <p class="h1" style="font-family: Georgia, 'Times New Roman', Times, serif;">Key components</p>
+        <hr>
+        <ul>
+            <li><p class="text">_id :-</p> 
+                This is a field required in every MongoDB document. The _id field represents a unique value in the MongoDB document. 
+                The _id field is like the document's primary key. If you create a new document without an _id field, 
+                MongoDB will automatically create the field. So for example, if we see the example of the  customer table, 
+                Mongo DB will add a 24 digit unique identifier to each document in the collection.    
+            </li>
+        </ul>
+        <table border="solid" style="margin-left: 40px;">
+            <tr style="padding: 14px;">
+                <th>_ID</th>
+                <th>CustomerID</th>
+                <th>CustomerName</th>
+                <th>OrderID</th>
+            </tr>
+            <tr >
+                <td>563479cc8a8a4246bd27d784</td>
+                <td>11</td>
+                <td>rajat</td>
+                <td>111</td>			
+            </tr>
+            <tr>
+                <td>563479cc7a8a4246bd47d784</td>
+                <td>22</td>			
+                <td>Trevor Smith</td>
+                <td>222</td>
+            </tr>
+            <tr>
+                <td>563479cc9a8a4246bd57d784</td>
+                <td>33</td>
+                <td>Nicole</td>
+                <td>333</td>			
+            </tr>
+        </table>
+        <ul>
+            <li><p class="text">Collection :-</p>
+                This is a grouping of MongoDB documents. A collection is the equivalent of a table 
+                which is created in any other RDMS such as Oracle or MS SQL. A collection exists within a single database. 
+                As seen from the introduction collections don't enforce any sort of structure.
+            </li>
+            <br>
+            <li><p class="text">Cursor :-</p>
+                This is a pointer to the result set of a query. Clients can iterate through a cursor to retrieve results.
+            </li>
+            <br>
+            <li><p class="text">Database :-</p>
+                This is a container for collections like in RDMS wherein it is a container for tables. 
+                Each database gets its own set of files on the file system. A MongoDB server can store multiple databases.
+            </li>
+            <br>
+            <li><p class="text">Document :-</p>
+                A record in a MongoDB collection is basically called a document. 
+                The document, in turn, will consist of field name and values.
+            </li>
+            <br>
+            <li><p class="text">Field</p>
+                A name-value pair in a document. A document has zero or more fields. 
+                Fields are analogous to columns in relational databases.
+            </li>
+            <br>
+            <li><p class="text">JSON</p>
+                This is known as JavaScript Object Notation. This is a human-readable, plain text format for expressing structured data. 
+                JSON is currently supported in many programming languages.
+            </li>
+        </ul>
+    </div>
+</div>
+

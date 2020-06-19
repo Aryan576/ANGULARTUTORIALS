@@ -1,0 +1,89 @@
+<div class="main">
+    <div class="container">
+        <p class="h1" style="font-family: Georgia, 'Times New Roman', Times, serif;">Introduction</p>
+        <hr>
+        <p class="text">
+            This is used to restrict the usage of admin panel by the user.
+        </p>
+        <div style="height: 50px;width: 750px;padding: 14px;background-color: #37474F;color: whitesmoke;">
+            <p>
+                ng g g auth
+            </p>
+        </div>
+        <ul>
+            <li>This will create a file named auth.gaurd.ts</li>
+        </ul>
+        <img src="./assets/admin6.png" height="800px">
+        <ul class="text">
+            <li> It will check in if statement that whether data in (res) is empty or not.</li>
+            <li>If data is not empty than console->application->sessionStorage the key and value will be true.</li>
+            <li>And through navigate we can send it to another page.</li>
+        </ul>
+        <img src="./assets/admin7.png" height="800px">
+        <p class="text">
+            The key and value which is set in login.component.ts is checked here.
+            If the data is undefined it will redirect to home page and return false.
+        </p>
+        <br>
+        <p class="text">
+            When login is successfull than it will redirect navigate to admin module.
+        </p>
+        <br>
+        <p class="text">
+            Create a module named log which will which will be bridge between app module and auth.module.
+        </p>
+        <div class="container">
+            <div class="row mt-1">
+                <div class="col-md-12">
+                    <ul class="stepper stepper-vertical">
+                        <li class="completed" style="margin-top: -45px;">
+                            <a href="#!">
+                                <span class="circle">1</span>
+                                <span class="label">auth.module.ts</span>
+                            </a>
+                            <p class="text" style="margin-left: 60px;">
+                                In auth.module.ts we need to import logModule.
+                            </p>
+                            <img src="./assets/admin8.png" height="800px" style="margin-left: 60px;">
+                        </li>
+                        <li class="active">
+                            <!--Section Title -->
+                            <a href="#!">
+                                <span class="circle">2</span>
+                                <span class="label">log.module.ts</span>
+                            </a>
+                            <p class="text" style="margin-left: 60px;">
+                                In log.module.ts we need to import logincomponent.
+                                It is necessary because through login form we will be able to enter admin panel.
+                            </p>
+                            <img src="./assets/admin9.png" height="800px" style="margin-left: 60px;">
+                        </li>
+                        <li class="active">
+                            <!--Section Title -->
+                            <a href="#!">
+                                <span class="circle">3</span>
+                                <span class="label">app.module.ts</span>
+                            </a>
+                            <p class="text" style="margin-left: 60px;">
+                                In app.module.ts we need to import both LogModule and AdminModule.
+
+                            </p>
+                            <img src="./assets/admin10.png" height="800px" style="margin-left: 60px;">
+                        </li>
+                        <li class="active">
+                            <a href="#!">
+                                <span class="circle">4</span>
+                                <span class="label">admin-routing.module.ts</span>
+                            </a>
+                            <img src="./assets/admin11.png" height="800px" style="margin-left: 60px;">
+                            <p class="text" style="margin-left: 60px;">
+                                By activating the auth-gaurd without login successfully anyone will not able to visit
+                                admin pages.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
